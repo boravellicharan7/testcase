@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Macondo+Swash+Caps&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Space+Grotesk:wght@300..700&family=WindSong:wght@400;500&display=swap');
+
+/* ================= General Styles ================= */
+body {
+    background-image: url("./images/Untitled design (5).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    color: whitesmoke;
+    font-family: 'Outfit', sans-serif;
+}
+
+header {
+    color: #FFFDF2;
+    text-align: center;
+    font-family: "Macondo Swash Caps", cursive;
+    padding: 10px;
+}
+
+header h2 {
+    font-size: 30px;
+}
+
+#title_name {
+    font-size: 15px;
+    font-family: "Macondo Swash Caps", cursive;
+    color: #FFFDF2;
+    text-align: center;
+}
+
+/* ================= Music Player Styles ================= */
+.music-player {
+    background: rgba(53, 51, 51, 0.5);
+    /* Semi-transparent dark background */
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.music-player img {
+    animation: rotate 5s linear infinite;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#song-title,
+#song-artist,
+#current-time,
+#duration {
+    color: #FFFDF2;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* ================= Button Styles ================= */
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    color: #FFFDF2;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#play-pause-btn {
+    color: #FFFDF2;
+}
+
+#prev-btn,
+#next-btn {
+    color: #FFFDF2;
+}
+
+/* ================= Progress Bar Styles ================= */
+input[type="range"] {
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px 0;
+    background: #a9a9a9;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #2f4f4f;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ================= Media Queries ================= */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+
+    #title_name {
+        font-size: 0.875rem;
+    }
+
+    .music-player {
+        width: 100%;
+        padding: 15px;
+    }
+
+    music-player img {
+        width: 120px;
+        height: 120px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    #title_name {
+        font-size: 0.75rem;
+    }
+
+    .music-player img {
+        width: 100px;
+        height: 100px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 0.875rem;
+    }
+}
